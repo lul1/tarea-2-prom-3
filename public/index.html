@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="main.js">
+
+    </script>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title></title>
+  </head>
+  <body>
+      <form method="post">
+
+        <p>
+            <label for="first_name">Nombre:</label>
+            <input type="text" name="first_name" id="first_name" required class="input-text">
+        </p>
+
+        <p>
+            <label for="last_name">Apellidos:</label>
+            <input type="text" name="last_name" id="last_name" class="input-text">
+        </p>
+
+        <p>
+            <label for="">Sexo:</label>
+            <input type="radio" name="gender"  value="f" id="femenino">
+            <label for="femenino">Femenino</label>
+            <input type="radio" name="gender"  value="m" id="masculino">
+            <label for="masculino">Masculino</label>
+        </p>
+
+        <p>
+            <label for="">Intereses:</label>
+            <label for="tecnologia">Tecnologia</label>
+            <input type="checkbox" name="interest" value="tec" id="tecnologia">
+            <label for="deportes">Deportes</label>
+            <input type="checkbox" name="interest" value="sport" id="deportes">
+            <label for="desarrollo">Desarrollo</label>
+            <input type="checkbox" name="interest" value="dev" id="desarrollo">
+        </p>
+
+          <input type="submit"  value="Registrar">
+
+      </form>
+  </body>
+</html>
