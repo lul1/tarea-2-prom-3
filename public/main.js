@@ -5,20 +5,28 @@ $(document).ready(function(){
 
         var first_name = $('#first_name').val(); //first_name
         var last_name = $('#last_name').val(); //last_name
-        var gender = $('input[name="gender"]:checked').val();
-        var interest = $('input[name="interest"]:checked');
-        var interests = new Array();
+        var answer = $('input[name="answer"]:checked').val();
+        var type = $('input[name="type"]:checked');
+        var types = new Array();
 
-        for (var i = 0; i < interest.length; i++) {
-          var temp_interest = interest[i];
-          interests.push(temp_interest.value);
+        for (var i = 0; i < type.length; i++) {
+          var temp_type = type[i];
+          types.push(temp_type.value);
+        }
+        var hobby = $('input[name="hobby"]:checked');
+        var hobbies = new Array();
+
+        for (var i = 0; i < hobby.length; i++) {
+          var temp_hobby = hobby[i];
+          hobbies.push(temp_hobby.value);
         }
 
         var payload = {
           'first_name':first_name,
           'last_name':last_name,
-          'gender':gender,
-          "interests": interests
+          'answer':answer,
+          "types": types,
+          "hobbies": hobbies
         }
 
         $.post('/find', payload);
