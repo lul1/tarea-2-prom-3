@@ -6,6 +6,7 @@ $(document).ready(function(){
         var first_name = $('#first_name').val(); //first_name
         var last_name = $('#last_name').val(); //last_name
         var answer = $('input[name="answer"]:checked').val();
+        var comentario = $('#comentario').val();
         var type = $('input[name="type"]:checked');
         var types = new Array();
 
@@ -26,7 +27,8 @@ $(document).ready(function(){
           'last_name':last_name,
           'answer':answer,
           "types": types,
-          "hobbies": hobbies
+          "hobbies": hobbies,
+          "comentario": comentario
         }
 
         $.post('/find', payload);

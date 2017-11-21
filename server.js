@@ -14,6 +14,8 @@ app.post("/find", (request, response) => {
       console.log(request.body.answer);
       console.log(request.body.types);
       console.log(request.body.hobbies);
+      console.log(request.body.comentario);
+
 
 
 
@@ -25,6 +27,8 @@ app.get("/find", (request, response) => {
       console.log(request.query.answer);
       console.log(request.query.types);
       console.log(request.query.hobbies);
+      console.log(request.query.comentario);
+
 
 
       response.json({"method": "get", "success": true});
