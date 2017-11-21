@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lul1/sync-async-form.git"
+    "url": "git+https://github.com/lul1/tarea-2-prom-3"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lul1/sync-async-form/issues"
+    "url": "https://github.com/lul1/tarea-2-prom-3"
   },
-  "homepage": "https://github.com/lul1/sync-async-form#readme",
+  "homepage": "https://github.com/lul1/tarea-2-prom-3-form#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2"

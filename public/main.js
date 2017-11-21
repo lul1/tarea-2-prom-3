@@ -3,10 +3,11 @@ $(document).ready(function(){
     $('input[type="submit"]').on("click",function(event){
         event.preventDefault();
 
-        var first_name = $('#first_name').val(); //first_name
-        var last_name = $('#last_name').val(); //last_name
+        var first_name = $('#first_name').val(); 
+        var last_name = $('#last_name').val();
         var answer = $('input[name="answer"]:checked').val();
         var comentario = $('#comentario').val();
+
         var type = $('input[name="type"]:checked');
         var types = new Array();
 
@@ -14,6 +15,7 @@ $(document).ready(function(){
           var temp_type = type[i];
           types.push(temp_type.value);
         }
+
         var hobby = $('input[name="hobby"]:checked');
         var hobbies = new Array();
 
@@ -21,6 +23,7 @@ $(document).ready(function(){
           var temp_hobby = hobby[i];
           hobbies.push(temp_hobby.value);
         }
+
 
         var payload = {
           'first_name':first_name,
