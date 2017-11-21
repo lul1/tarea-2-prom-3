@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="main.js">
+
+    </script>
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title></title>
+  </head>
+  <body>
+      <form method="post">
+
+        <p>
+            <label for="first_name">Nombre:</label>
+            <input type="text" name="first_name" id="first_name" required class="input-text">
+        </p>
+
+        <p>
+            <label for="last_name">Apellidos:</label>
+            <input type="text" name="last_name" id="last_name" class="input-text">
+        </p>
+
+        <p>
+            <label for="">¿Te gusta leer libros?:</label>
+            <input type="radio" name="answer"  value="yes" id="answer_yes">
+            <label for="si">Si</label>
+            <input type="radio" name="answer"  value="no" id="answer_no">
+            <label for="no">No</label>
+        </p>
+
+        <p>
+            <label for="">¿Que tipo de libros lees?:</label>
+            <label for="terror">Terror</label>
+            <input type="checkbox" name="type" value="horror" id="terror">
+            <label for="aventura y fantasia">Aventura y Fantasia</label>
+            <input type="checkbox" name="type" value="ayf" id="aventura y fantasia">
+            <label for="crimen">Crimen</label>
+            <input type="checkbox" name="type" value="crimes" id="crimen">
+            <label for="suspenso">Suspenso</label>
+            <input type="checkbox" name="type" value="suspense" id="suspenso">
+
+        </p>
+        <p>
+            <label for="">¿Que otras actividades haces?:</label>
+            <label for="deportes">Deportes</label>
+            <input type="checkbox" name="hobby" value="sports" id="sports">
+            <label for="videojuegos">Videojuegos</label>
+            <input type="checkbox" name="hobby" value="videogames" id="Videojuegos">
+            <label for="viajar">Viajar</label>
+            <input type="checkbox" name="hobby" value="travel" id="Viajar">
+        </p>
+
+        <p>
+            <textarea name="comentario" rows="4" cols="40" id="comentario">Escribe el nombre de tu libro favorito y su autor</textarea>
+        </p>
+
+
+          <input type="submit"  value="Registrar">
+
+      </form>
+  </body>
+</html>
