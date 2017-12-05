@@ -1,55 +1,24 @@
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
+    var forms = document.querySelectorAll("form");
+    var form = forms[0];
 
-  var forms = document.querySelectorAll("form")
-  var form = forms[0];  //Primera coincidencia
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
 
-  form.addEventListener("submit", function(event){
-      event.preventDefault();
-      var first_name = document.querySelectorAll("#first_name")[0].value;
-      var last_name = document.querySelectorAll("#last_name")[0].value;
+        var first_name = document.querySelectorAll("#first_name")[0].value;
+        var last_name = document.querySelectorAll("#last_name")[0].value;
 
+        var message = document.querySelectorAll("#message")[0];
+        message.innerHTML = message.innerHTML + "<span>" + first_name + " " + last_name + "</span>";
 
+        var payload = {
+            'first_name': first_name,
+            'last_name': last_name,
+        }
 
-      var message = document.querySelectorAll("#message")[0];
-      message.innerHTML = message.innerHTML + "<span>" + first_name + "</span>" +last_name;
-
-
-  });
-
-
-
-
-
-
-$(document).ready(function(){
-  $('input[type="submit"]').on("click",function(event){
-      event.preventDefault();
-
-      var first_name = $('#first_name').val();
-      var last_name = $('#last_name').val();
-      var carreer = $('input[name="carreer"]:checked').val();
-
-
-
-      var payload = {
-        'first_name':first_name,
-        'last_name':last_name,
-        'carreer':carreer,
-
+        $.post("/find", payload);
       }
-
-      $.post('/find', payload);
-      $.get('/find', payload);
-
-
-
-  });
-});
-
-
+    );
 })
 /*
 

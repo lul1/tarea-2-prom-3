@@ -1,3 +1,5 @@
+
+
 const express = require("express");
 const app     = express();
 const path    = require("path");
@@ -19,7 +21,8 @@ app.post("/find", (request, response) => {
 
       response.json({"method": "post", "success": true});
 });
-app.get("/find", (request, response) => {
+
+/*app.get("/find", (request, response) => {
       console.log(request.query.first_name),
       console.log(request.query.last_name);
       console.log(request.query.answer);
@@ -29,7 +32,7 @@ app.get("/find", (request, response) => {
 
 
       response.json({"method": "get", "success": true});
-});
+});*/
 
 app.use("/", express.static("public"));
 
